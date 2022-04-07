@@ -8,6 +8,7 @@ array.map(Any function or logic)
 */
 let arr = [5, 3, 7, 2, 8, 4]
 
+console.log("\n---------------- Map() ------------------")
 const binary = arr.map((i) => i.toString(2))
 
 console.log(binary)
@@ -17,7 +18,7 @@ console.log(binary)
 2. Filter function : Filter is used to filter the values inside an Array.
 */ 
 
-
+console.log("\n---------------- Filter() ------------------")
 function isEven(i){
   return i % 2 === 0
 }
@@ -34,17 +35,20 @@ console.log(even)
 */
 
 // Find the max in the array
-
+console.log("\n----------------- Reduce() : Max in The Array ------------------")
 const output = arr.reduce(function(acc,curr){
-  if(acc < curr)
-    acc = curr
+  // if(acc < curr)
+  //   acc = curr
+  // return acc
+  (acc < curr) ? acc = curr : acc
   return acc
 }, -999)
 
 console.log(output)
 
 
-// Write a reducer function to written names of people who are below age of 30
+// Write a reducer function to return names of people who are below age of 30
+console.log("\n---------------- Reduce() function Exercise ------------------")
 const users = [
   {firstName: "Raja", lastName: "Bhai", age:26 },
   {firstName: "Deep", lastName: "Rathod", age:45 },
